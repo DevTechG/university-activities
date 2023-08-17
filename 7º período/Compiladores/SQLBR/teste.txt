@@ -1,0 +1,1 @@
+ABRIR_TABELA "Coluna1", "Coluna2", "Coluna3" DE Tabela 

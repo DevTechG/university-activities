@@ -1,0 +1,12 @@
+soma
+nota1
+12.50
+/* comentario com varias
+linhas
+final */
+// comentario de uma linha
+if
+class
+int while do
+preco_de_venda
+preco.maximo
