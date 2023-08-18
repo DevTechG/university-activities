@@ -1,0 +1,1 @@
+image = love.graphics.newImage("dvd.png")
