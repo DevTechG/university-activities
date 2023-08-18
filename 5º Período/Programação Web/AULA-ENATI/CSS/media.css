@@ -1,0 +1,13 @@
+@media screen and (max-width: 900px) {
+	.speakers .panelist, .cover {
+		flex: 1 1 100%;
+	}
+
+	.speakers .panelist img {
+		width: 100%;
+	}
+
+	.cover {
+		flex-direction: column-reverse;
+	}
+}

@@ -1,0 +1,30 @@
+.cover {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	background-image: url("../Images/layout/binarios.png");
+	Background-repeat: no-repeat;
+	Background-position: center right;
+}
+
+.cover h1 {
+	font-family: 'IBM Plex Sans';
+	font-size: 50px;
+	font-weight: 600;
+	text-transform: uppercase;
+	color: var(--green);
+}
+
+.cover h2 {
+	font-family: 'IBM Plex Sans';
+	font-weight: 100;
+	font-size: 50px;
+}
+
+.cover span {
+	font-weight: 700;
+}
+.cover div {
+	max-width: 650px;
+}

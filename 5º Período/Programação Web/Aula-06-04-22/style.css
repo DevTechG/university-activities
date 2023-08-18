@@ -1,0 +1,16 @@
+div {
+	height: 200px;
+	display: none;
+}
+
+#amarelo {
+	background: yellow;	
+}
+
+#vermelho {
+	background: red;
+}
+
+.mostrar {
+	display: flex;
+}

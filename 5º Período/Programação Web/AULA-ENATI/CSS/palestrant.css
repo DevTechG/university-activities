@@ -1,0 +1,40 @@
+.panelist {
+	position:relative;
+	border-radius: 20px;
+	overflow: hidden;
+}
+
+.panelist .sheet {
+	position: absolute;
+	bottom: 0;
+	width: calc(100% - 15px);
+	padding-left: 15px;
+	height: 120px;
+	display: flex;
+	flex-direction: column;
+	background: linear-gradient(137.43deg, rgba(0, 0, 0, 0.5) 3.89%, rgba(0, 0, 0, 0.2) 100%);
+	backdrop-filter: blur(23.2936px);
+	display: flex;
+	justify-content: center;	
+}
+
+.panelist .sheet p {
+	font-family: 'JetBrains Mono', monospace;
+	font-size: 18px;
+	font-weight: 700;
+	text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	text-align: left;
+	padding-left:15px;
+}
+
+.panelist .sheet p:last-child {
+	color: var(--green);
+	font-weight: 300;
+}
+
+.speakers {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 100px;
+	flex-wrap: wrap;
+}

@@ -1,0 +1,19 @@
+body {
+	background-color: #000000;
+	/*background-color: yellowgreen;*/
+}
+
+:root {
+	--green:#B7C325;
+}
+.container {
+	max-width: 1216px;
+	min-width: 400px;
+	margin: 0 auto;
+}
+
+a, h2, h3, p {
+	text-decoration: none;
+	color: #FFFFFF;
+}
+

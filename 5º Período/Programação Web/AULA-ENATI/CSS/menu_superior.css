@@ -1,0 +1,32 @@
+header {
+	font-family: 'IBM Plex Sans', sans-serif;
+	margin-top: 40px;
+}
+
+header nav ul {
+	list-style: none;
+	display: flex;
+	align-items: center;
+}
+
+header nav ul li {
+	margin-left: 10px;
+	text-transform: uppercase;
+	font-weight: 600;
+}
+
+header nav ul li:last-child {
+	background: var(--green);
+	border-radius: 45px;
+	padding: 5px 10px
+}
+
+header nav ul li:last-child a {
+	color: #000000;
+}
+
+header .top {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
