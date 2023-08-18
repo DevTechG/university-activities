@@ -1,0 +1,4 @@
+Ao longo deste encontro, criamos o banco de dados utilizando o PHPMyAdmim, juntamente com as funções de cadastrar, atualizar, consultar e apagar linhas do banco de dados no codigo java. 
+Após isso, demos inicio ao layout do projeto, com os JTextField e JLabel, para que ocorra a interação com o usuario. 
+Além disso, tambem implementamos um botao para realizar as pesquisas no banco de dados e a visualização destes dados em uma tabela. 
+Com isso, a nossa principal dificuldade foi na parte de construir o layout, já que a produção de layout exige muitos detalhes.
