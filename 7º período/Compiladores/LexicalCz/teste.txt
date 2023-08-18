@@ -1,0 +1,7 @@
+@Soma
+$Nota1
+f
+int
+whl
+d
+.
