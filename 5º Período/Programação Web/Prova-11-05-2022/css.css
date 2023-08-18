@@ -1,0 +1,48 @@
+body {
+    background: #d1e2bd;
+}
+
+.container {
+    max-width: 350px;
+    margin: 0 auto;
+}
+.cards{
+    display: flex;
+	justify-content: space-between;
+	margin-top: 10px;
+	flex-wrap: wrap;
+}
+
+.card {    
+    margin: 20px 0px;
+    align-items: center;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.card-nome, .card-cargo{
+    background: #dfffbb;
+	display: flex;
+	align-items: center;
+    justify-content: center;	
+}
+
+.card-img {
+    padding: 0;
+    position: relative;
+}
+
+.card-img>img {
+    width: 100%;
+}
+
+.card-minicurso {	
+	display: none;
+}
+
+.exibir {
+	display: flex;
+    background: #dfffbb;
+    align-items: center;
+    justify-content: center;
+}
