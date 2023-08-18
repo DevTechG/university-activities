@@ -1,0 +1,37 @@
+package Analyzer;
+import java_cup.runtime.*;
+import java.util.*;
+import java.io.*;
+parser code {:   
+  public void report_error(String message, Object info)  { 
+      System.out.println("AVISO - " + message);  
+      System.out.println(info.toString());                
+}
+  public void report_fatal_error(String message, Object info)  {
+        System.out.println("ERRO - " + message);         
+        System.exit(-1);
+    }               
+:};
+
+terminal PROGRAMA, INICIO, FIM, TIPO_INTEIRO, TIPO_CHAR;
+terminal PTVG, SIMBOLO_ATRIB, CHAR, INTEIRO, VARIAVEL;
+terminal FUNCTION_NAME, VARIABLE_NAME, ABRE_P, FECHA_P, VGL; 
+   
+non terminal program, comandos, comando, decl_atrib, expr;
+non terminal decl_variavel, tipo_dado, decl_funcao, vars_funcao, var_funcao;
+
+start with program;
+//declaracao das producoes da gramatica
+program  ::= PROGRAMA INICIO comandos FIM;
+comandos ::= comando comandos | comando;
+comando  ::= decl_atrib | decl_variavel | decl_funcao;
+
+decl_atrib ::= VARIABLE_NAME SIMBOLO_ATRIB expr PTVG;
+expr ::= VARIABLE_NAME | INTEIRO | CHAR;
+
+decl_variavel ::= tipo_dado VARIABLE_NAME PTVG;
+tipo_dado ::= TIPO_INTEIRO | TIPO_CHAR;
+
+decl_funcao ::= tipo_dado FUNCTION_NAME ABRE_P vars_funcao FECHA_P;
+vars_funcao ::= var_funcao vars_funcao | var_funcao;
+var_funcao ::= tipo_dado VARIABLE_NAME | VGL | tipo_dado INTEIRO | CHAR;

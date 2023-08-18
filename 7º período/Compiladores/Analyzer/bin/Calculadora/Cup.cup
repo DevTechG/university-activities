@@ -1,0 +1,41 @@
+package Calculadora;
+
+import java_cup.runtime.*;
+parser code {:
+//codigo criado para reportar erro sintático
+public void report _ error(String message,
+Object info) {
+System.out.println(“AVISO: - “ +
+message); }
+public void report _ fatal _ error(String
+message, Object info) {
+ System.out.println(“ERRO - “ + message);
+ System.exit(-1); }
+:}
+terminal PTVG, MAIS, MENOS, VEZES, DIVIDE, ABRE_PAREN, FECHA_PAREN;
+//aqui estamos informando que o terminal NUMERO terá um valor do tipo inteiro terminal Integer NUMERO;
+non terminal expr _ list;
+non terminal Integer expr; // a produção expr terá um valor do tipo inteiro
+//por se tratar da analise de um calculo matemático, foi definida as precedencias
+}
+// para as operacoes
+precedence left MAIS, MENOS;
+precedence left VEZES, DIVIDE;
+
+start with expr _ list; // indica qual a produção
+inicial
+ // acoes para mostrar o resultado do calculo
+expr _ list ::= expr _ list expr:e PTVG {: System.out.println(“>> “ + e); :}
+ | expr:e PTVG {: System.
+out.println(“>> “ + e); :}
+;
+// aqui temos as acoes semantica RESULT armazena um resultado
+expr ::= expr:e1 MAIS expr:e2 {: RESULT = e1+e2; :}
+ | expr:e1 MENOS expr:e2 {: RESULT = e1-e2; :}
+ | expr:e1 VEZES expr:e2 {: RESULT = e1*e2; :}
+| expr:e1 DIVIDE expr:e2 {: RESULT = e1/e2; :}
+ | ABRE_PAREN expr:e
+FECHA_PAREN
+{: RESULT = e; :}
+ | NUMERO:n {: RESULT = n; :}
+;
