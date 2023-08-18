@@ -1,0 +1,38 @@
+package exemplo1;
+
+import java_cup.runtime.*;
+
+action code{:
+    TabelaSimbolos table = new TabelaSimbolos();
+    :};
+
+terminal MAIS, MENOS, VEZES, DIVIDIDO;
+terminal PT_VIRG, ABRE_PAR, FECHA_PAR;
+terminal Integer NUMERO;
+terminal String IDENTIFICADOR;
+
+
+non terminal expr, program, comand;
+non terminal Integer expr;
+
+precedence nonassoc EQUAL;
+precedence left PLUS, MINUS;
+precedence right TIMES, DIVISION;
+
+exp ::= epx PLUS exp |
+        epx MINUS exp |
+        NUMBER 
+        ;
+
+listaDecl ::= decl listaDecl | ;
+
+terminal PLUS;
+terminal Integer NUMERO;
+non terminal Integer exp;
+
+exp ::= NUMERO:n {:
+    RESULT = n; :}
+    | exp:e1 PLUS exp:e2
+    {:RESULT = new Integer(e1.intValue() + e2.intValue());
+        :}
+    ;
