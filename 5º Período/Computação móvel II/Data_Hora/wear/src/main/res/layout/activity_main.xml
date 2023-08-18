@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.wear.widget.BoxInsetLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical">
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/Data"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:autoSizeTextType="uniform"
+                android:gravity="center"
+                android:text="Data"
+                android:textAlignment="center" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/Hora"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:autoSizeTextType="uniform"
+                    android:gravity="center"
+                    android:text="Hora" />
+
+                <TextView
+                    android:id="@+id/Segundos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:autoSizeTextType="uniform"
+                    android:gravity="center"
+                    android:text="Se" />
+
+            </LinearLayout>
+
+        </TableRow>
+
+    </TableLayout>
+
+
+</androidx.wear.widget.BoxInsetLayout>

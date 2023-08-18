@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="auto_text_sizes">
+        <item>25pd</item>
+        <item>30pd</item>
+        <item>35pd</item>
+        <item>40pd</item>
+        <item>45pd</item>
+    </array>
+</resources>
